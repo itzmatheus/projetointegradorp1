@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+			<title>Excelsior Technology</title>
+				<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+				<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+				<!-- <link rel="icon" type="image/x-icon" href="img\icone.jpeg"> -->
+				<link rel="icon" type="image/x-icon" href="{% static 'img/icone.jpeg	' %}">
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+		<body style="background: linear-gradient(#FFFAFA, #FFFAF0);">
+			<header>
+				<nav class="page-nav grey darken-3">
+				    <div class="nav-wrapper">
+				      <a href="#!" class="brand-logo" style="margin-left: 15px;">Logo</a>
+				      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				      <ul class="right hide-on-med-and-down">
+				      	<li><a href="sass.html">Login</a></li>
+				        <li><a href="sass.html">Sass</a></li>
+				        <li><a href="badges.html">Components</a></li>
+				        <li><a href="collapsible.html">Javascript</a></li>
+				        <li><a href="mobile.html">Mobile</a></li>
+				      </ul>
+				      <ul class="side-nav" id="mobile-demo">
+				      	<li><a href="sass.html">Login</a></li>
+				        <li><a href="sass.html">Sass</a></li>
+				        <li><a href="badges.html">Components</a></li>
+				        <li><a href="collapsible.html">Javascript</a></li>
+				        <li><a href="mobile.html">Mobile</a></li>
+				      </ul>
+				    </div>
+			  	</nav>
+			</header>
+			<main>
+
+			    <div class="parallax-container">
+			    	<h1 style="color:rgba(250, 250, 250, 0.9); margin-top: 180px; font-size: 90px;" class="center">Bem-vindo!</h1>
+			      <!-- <div class="parallax"><img src="img/parallax2.jpeg"></div> -->
+			      <div class="parallax"><img src="{% static 'img/parallax2.jpeg' %}"></div>
+			    </div>
+
+			<div class="container">
+				<div class="card">
+				    <div class="card-image waves-effect waves-block waves-light">
+				      <img class="activator" src="{% static 'img/f.jpg' %}">
+				      <!-- <img class="activator" src="img/f.jpg"> -->
+				    </div>
+				    <div class="card-content">
+				      <span class="card-title activator grey-text text-darken-4">MarkeTech<i class="material-icons right">more_vert</i></span>
+				      <p><a href="#">Como funciona?</a></p>
+				    </div>
+				    <div class="card-reveal">
+				      <span class="card-title grey-text text-darken-4">MarkeTech<i class="material-icons right">close</i></span>
+				      <p>Carrinho de compras inteligente. (Aprimorar)</p>
+				    </div>
+				  </div>
+
+
+
+
+
+
+
+					  <div class="fixed-action-btn horizontal">
+					    <a class="btn-floating btn-large red">
+					      <i class="large material-icons">mode_edit</i>
+					    </a>
+					    <ul>
+					      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+					      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+					      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+					      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+					    </ul>
+					  </div>
+
+
+
+
+		     </div>
+			</main>
+
+			<footer class="page-footer grey darken-3" style="margin-top: 35px;">
+	          <div class="container">
+	            <div class="row">
+	              <div class="col l6 s12">
+	                <h5 class="white-text">Excelsior Technology</h5>
+	                <p class="grey-text text-lighten-4">Aqui podemos colocar algumas informações do carrinho ou da empresa.</p>
+	              </div>
+	              <div class="col l4 offset-l2 s12">
+	                <h5 class="white-text">Links</h5>
+	                <ul>
+	                  <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
+	                  <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+
+	                </ul>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="footer-copyright">
+	            <div class="container">
+	            © 2018 ExcelsiorTech
+	            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+	            </div>
+	          </div>
+        	</footer>
+			<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+			<script type="text/javascript" src="{% static 'js/init.js' %}"></script>
+			<script>
+				function Validate() {
+			     var nome = document.getElementById("first_name").value;
+			     var sobre = document.getElementById("last_name").value;
+			     var email = document.getElementById("email").value;
+			     var senha1 = document.getElementById("password").value;
+			     var senha2 = document.getElementById("password2").value;
+
+
+			     if(nome == ""){
+			     	alert("Coloque seu nome!");
+			     	return false;
+			     	}
+
+		     	 if (!/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/.test(nome)){
+   					alert("ATENÇÃO! Digite apenas letras no nome");
+   					return false;
+   					}
+   				if (sobre == "") {
+   					alert("Coloque o seu sobrenome");
+   					return false;
+
+   					}
+				if (!/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/.test(sobre)){
+   					alert("ATENÇÃO! Digite apenas letras no sobrenome");
+   					return false;
+   					}
+
+				 if (senha1 != senha2) {
+				 	alert("As senhas não conferem");
+				 	return false;
+				 }
+
+			      if (!/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(email)){
+       				alert('Digite um e-mail válido');
+       				return false;
+       				}
+
+
+	   			}
+			</script>
+		</body>
+
+</html>

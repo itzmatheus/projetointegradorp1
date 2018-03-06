@@ -1,0 +1,28 @@
+/* Custom Stylesheet */
+/*
+  Usado para criar estilos customizados, complementando ou sobrescrevendo
+  o CSS do Materialize
+ */
+
+body {
+	background-color: #ddd;
+	display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+  main {
+    flex: 1 0 auto;
+}
+
+
+
+.textjustify {
+	text-align: justify;
+
+}
+
+
+
+
+

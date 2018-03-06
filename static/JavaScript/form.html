@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Marc's Blog</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="css/stylecss.css">
+</head>
+<body>
+
+<main class="content">
+
+  <!-- div que contem o card com os inputs de formulários -->
+  <div class="card center-align-comentario" style="box-shadow: 0 8px 20px 0 rgba(0,0,0,0.1);">
+    <div class="container" style="padding: 15px 10px 15px;">
+      <h1 style="font-size:15px">Novo comentário <a href="" class="btn" style="text-align:right; margin-left:120px; font-weight: normal;" onclick="return Mensagem()">Javascript</a></h1>
+      <form method="POST" class="post-form">
+        <input name="author" maxlength="200" required="" id="id_author" type="text" placeholder="Nome"><br>
+        <input name="telefone" type="text" placeholder="Telefone" id="telefone"><br>
+        <input name="email" type="text" placeholder="E-mail" id="email"><br>
+        <textarea name="text" cols="40" rows="10" id="comentario" placeholder="Comentário" style="padding: 10px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" required></textarea>
+        <p style="font-size:10px; margin-top:-5px">* Nome, E-mail e Comentário obrigatório</p>
+        <div style="text-align:center">
+          <button type="submit" class="btn" onclick="return Validate()">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!--  Scripts -->
+  <script>
+    function Validate() {
+     var nome = document.getElementById("id_author").value;
+     var email = document.getElementById("email").value;
+     var comentario = document.getElementById("comentario").value;
+     var telefone = document.getElementById("telefone").value;
+     // Se o campo nome estiver em branco
+
+     if (nome == ""){
+        alert("Digite o seu nome");
+        return false;
+     }
+
+     // Se o campo nome não conter os caracteres que estão na chave abaixo
+     if (!/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/.test(nome)){
+       alert("ATENÇÃO! Digite apenas letras no nome");
+       return false;
+     }
+      // Se o campo telefone não estiver em branco
+     if (telefone != ""){
+       // Se o campo telefone não conter os caracteres que estão na chave abaixo
+       if (!/^[0-9]+$/.test(telefone)){
+         alert('Digite apenas números');
+         return false;
+       }
+     }
+     // Se o campo email não conter os caracteres que estão na chave abaixo
+     if (!/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(email)){
+       alert('Digite um e-mail válido');
+       return false;
+     }
+     // Se o campo comentario for menor que cinco digitos
+     if(comentario.length < 5){
+        alert("O comentário deve conter pelo menos 5 digitos");
+        return false;
+       }
+    }
+    // Mensagem do botão javascript
+    function Mensagem() {
+      alert("Para testar a validação deste formulário, escreva números no campo nome, escreva menos de 5 digitos no comentário.");
+    }
+  </script>
+
+</main>
+
+</body>
+</html>
