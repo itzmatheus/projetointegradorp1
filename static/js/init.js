@@ -1,15 +1,10 @@
-$(".button-collapse").sideNav();
+(function($){
+  $(function(){
 
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+    // $('.modal').modal();
+    $('#modal1').modal('open');
 
-    $(document).ready(function(){
-      $('.parallax').parallax();
-    });
-
-    
-// (function($){
-//   $(function(){
-//
-//     $('.button-collapse').sideNav();
-//
-//   }); // fim do documento pronto
-// })(jQuery); // fim do jQuery name space
+  }); // end of document ready
+})(jQuery); // end of jQuery name space
