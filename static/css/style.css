@@ -2,6 +2,9 @@ nav ul a,
 nav .brand-logo {
   color: #444;
 }
+nav ul li a {
+  color: black;
+}
 
 p {
   line-height: 2rem;
@@ -45,10 +48,6 @@ p {
 footer.page-footer {
   margin: 0;
 }
-
-
-
-
  .parallax img
  {
  	 background-repeat: no-repeat;
