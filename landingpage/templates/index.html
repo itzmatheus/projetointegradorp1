@@ -166,38 +166,40 @@
 
 <div class="row">
 
-  <form class="col s8">
+  <form method="POST" class="col s8">{% csrf_token %}
 
     <div class="row">
       <div class="input-field col s6">
-        <input id="name" type="text" class="validate">
-        <label for="name">Nome completo</label>
+        <input id="name" name="name" type="text" class="validate">
+        <label for="{{form.name.id_for_label}}">Nome completo</label>
       </div>
 
 
       <div class="input-field col s6">
-        <input id="email" type="email" class="validate">
-        <label for="email">Email</label>
+        <input id="email" name="email" type="email" class="validate">
+        <label for="{{form.email.id_for_label}}">Email</label>
       </div>
     </div><!--row-->
 
      <div class="row">
       <div class="input-field col s12">
-        <input id="message-sub" type="email" class="validate">
-        <label for="message-sub">Título da mensagem</label>
+        <input id="title" name="title" type="text" class="validate">
+        <label for="{{form.title.id_for_label}}">Título da mensagem</label>
       </div>
     </div>
 
      <div class="row">
       <div class="input-field col s12">
-         <textarea id="text_area" class="materialize-textarea"></textarea>
-        <label for="text_area">Mensagem</label>
+  <!--           <textarea name="message" required id="id_message" rows="10" cols="40">
+</textarea> -->
+         <textarea id="message" name="message" required class="materialize-textarea"></textarea>
+        <label for="{{form.message.id_for_label}}">Mensagem</label>
       </div>
     </div>
 
 
       <div>
-      	<a class="waves-effect waves-light btn purple lighten-1">Enviar mensagem<i class="mdi-content-send right"></i></a>
+      	<button type="submit" class="waves-effect waves-light btn purple lighten-1">Enviar mensagem<i class="mdi-content-send right"></i></button>
       </div>
      </form>
 
@@ -239,7 +241,6 @@
     </div>
   </div>
 </div>
-
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
