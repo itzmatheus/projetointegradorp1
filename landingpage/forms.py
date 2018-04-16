@@ -9,8 +9,8 @@ class MessageForm(forms.ModelForm):
 		attrs={'class':'form-control'}),required=False, label='Email')
 	title = forms.CharField(widget=forms.TextInput(
 		attrs={'class':'form-control'}), label='Titulo da menssagem')
-	message = forms.CharField(widget=forms.Textarea(
-		attrs={'rows': 5, 'cols': 100}))
+	message = forms.CharField(widget=forms.TextInput(
+		attrs={'class':'form-control'}), label='Mensagem')
 
 	class Meta:
 		model = Message
