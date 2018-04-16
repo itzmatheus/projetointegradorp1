@@ -11,6 +11,8 @@ migrations/
 migrations/__pycache__/
 __pychache__
 db.sqlite3
+venv
+.idea
 
 # Distribution / packaging
 .Python
