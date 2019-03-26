@@ -1,377 +1,252 @@
+{% load static %}
 <!DOCTYPE html>
-{% load staticfiles %}
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
   <title>Excelsior Tech</title>
 
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
-  <!-- CSS  -->
-  <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
-<!--   <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <!-- Custom fonts for this template -->
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/grayscale.min.css' %}" rel="stylesheet">
 
-  <link rel="shortcut icon" href="{% static 'images/favicon (8).ico' %}" type="image/x-icon">
-<link rel="icon" href="{% static 'images/favicon (8).ico' %}" type="image/x-icon">
 </head>
-<body>
-<div id="navbar" class="navbar scrollspy">
-  <nav  class="white">
-    <div class="nav-wrapper container">
-    	<div class="container"> <a href="#navbar" class="brand-logo black-text">Excelsior Technologies</a></div>
+<style media="screen">
+.masthead {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("{% static 'images/bg-masthead.jpg' %}");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("{% static 'images/bg-masthead.jpg' %}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+.signup-section {
+  padding: 10rem 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("{% static 'images/bg-signup.jpg' %}");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("{% static 'images/bg-signup.jpg' %}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+</style>
+<body id="page-top">
 
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-      <ul class="right hide-on-med-and-down">
-
-        <li><a class="head-link" href="#projects">Projeto</a></li>
-         <li><a class="head-link" href="#equipe">Equipe</a></li>
-        <li><a class="head-link" href="#contacts">Contato</a></li>
-
-      </ul>
-      <ul class="right side-nav" id="mobile-demo">
-      	<li><a class="head-link" href="#projects">Projeto</a></li>
-         <li><a class="head-link" href="#aboutus">Sobre nós</a></li>
-
-        <li><a class="head-link" href="#contactus">Contato</a></li>
-      </ul>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
-  </div>
 
-  <!-- <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center black-text">Smartfit para Idosos</h1>
-        <div class="row center">
-          <h5 class="header col s12 black-text">Pulseira inteligente para idosos utilizarem e viverem por mais tempo.</h5>
-        </div>
-        <div class="row center">
-          <a href="#work" class="btn-large waves-effect waves-light blue lighten-1">Saiba mais</a>
-        </div>
-        <br><br>
-
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">Excelsior Technologies</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">Pensamentos. Ideias. Mudanças.</h2>
+        <a href="#about" class="btn btn-primary js-scroll-trigger">Saiba mais</a>
       </div>
     </div>
-    <div class="parallax"><img style="position: absolute; bottom: -20vh;"src="{% static 'images/Doação.png' %}" alt="Unsplashed background img 2"></div>
-  </div> -->
+  </header>
 
-
-  <!-- <div class="container" id="projects">
-    <div class="section"> -->
-
-      <!--   Icon Section   -->
-      <!-- <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center" style="color:#333"><i class="material-icons medium">access_alarm</i></h2>
-            <h5 class="center">Mais segurança</h5>
-
-            <p class="light">Previna que seus pais sofram calados com quedas. A pulseira alerta quando o usuário cair.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center" style="color:#333"><i class="material-icons medium">insert_chart</i></h2>
-            <h5 class="center">Controle da saúde</h5>
-
-            <p class="light">Além de monitorar quedas a pulseira também monitora a saúde do usuário. Prevenindo várias doenças! </p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center" style="color:#333"><i class="material-icons medium">watch</i></h2>
-            <h5 class="center">Pulseira discreta</h5>
-            <p class="light">O usuário não vai lembrar que está usando uma pulseira super tecnológica devido a sua aparência com um relógio! </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12" style="color: white; font-size: 40px;">Previna mais acidentes e controle sua saúde com a pulseira inteligente.</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="{% static 'images/dream-infrared-meadow-2220-824x550.jpg' %}" alt="img"></div>
-  </div> -->
-
-  <!-- <div class="container section scrollspy" id="projects">
-    <div class="section">
-      <h4 id="work" class="center">Protótipo do projeto</h4>
-      <br>
+  <!-- About Section -->
+  <section id="about" class="about-section text-center">
+    <div class="container">
       <div class="row">
-      	<div class="col s12">
-      	<img class="materialboxed responsive-img" data-caption="Um exemplo de como seria o aplicativo de vendas"  src="{% static 'images/prototipo.jpg' %}">
-      	</div>
-      </div><!--row-->
-    </div> -->
-  </div>
+        <div class="col-lg-8 mx-auto">
+          <h2 class="text-white mb-4">Contabilizador de Funcionários</h2>
+          <p class="text-white-50">Do ponto de vista histórico-cultural, nossa sociedade tem comprovadamente passado por 3 revoluções industriais, entretanto, momentos de transição nunca são tão percebidos e por isso, algumas afirmações e conteúdos históricos estão acontecendo e não temos como datar de forma de agregar à história que conhecemos. Por outro lado, vivemos em um âmbito de avanço tecnológico muito abrupto o qual faz com que até mesmo pessoas fora do círculo ativo da revolução perceba e faça parte da mesma.
+            <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+        </div>
+      </div>
+      <img src="{% static 'images/ipad.png' %}" class="img-fluid" alt="">
+    </div>
+  </section>
 
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section bg-light">
+    <div class="container">
 
-   <div class="parallax-container valign-wrapper section scrollspy" id="aboutus">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="center row col s3">
+      <!-- Featured Project Row -->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-8 col-lg-7">
+          <img class="img-fluid mb-3 mb-lg-0" src="{% static 'images/bg-masthead.jpg' %}" alt="">
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h4>A Ideia </h4>
+            <p class="text-black-50 mb-0">Hoje em dia, vivemos na 4ª Revolução Industrial, acredita?! Pois é, estamos na era em que as inteligências artificias e análise de grande informações dos dados é necessário para gerar mais informação e tecnologia. Tem-se a necessidade de filtragem e raspagem de dados para que com esses dados, gere a informação necessária para evolução e inovação. Diante disso, define-se o nosso tema do Projeto Integrador do Centro Universitário de João Pessoa - UNIPÊ.
+!</p>
+          </div>
+        </div>
+      </div>
 
-        	<h3 class="white-text" id="equipe">Nossa equipe</h3>
-       </div>
-        <div class="center row col s12">
-          <!---->
-          <!--   Icon Section   -->
+      <!-- Project One Row -->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="{% static 'images/demo-image-01.jpg' %}" alt="">
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-white">Projeto Integrador</h4>
+                <p class="mb-0 text-white-50">Aplicado a este âmbito já definido, tem-se vários conteúdos e contextos que devem ser elaborados e criado, entretanto, será mostrado de forma geral, qual contexto abordamos neste período.</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Two Row -->
+      <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="{% static 'images/demo-image-02.jpg' %}" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-white">O Projeto</h4>
+                <p class="mb-0 text-white-50">Em nosso projeto será elaborado um sistema que, através de uma câmera, consiga realizar o ponto de diversos funcionários simultaneamente, sem a necessidade de passar por grandes filas e por grande perca de tempo de produção. Tornando mais automático e preciso a incidência do funcionário e controle do RH da empresa.</p>
+                <hr class="d-none d-lg-block mb-0 mr-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Signup Section -->
+  <section id="signup" class="signup-section">
+    <div class="container">
       <div class="row">
-        <div class="col s12 m3">
-          <div class="icon-block">
-            <button class="btn waves-effect waves-light red lighten-2 ">Matheus Leite</button>
-            <h2 class="center"><img class="circle responsive-img" src="{% static 'images/profile1.jpg' %}" width="50%"></h2>
-            <a href="#modal2" class="waves-effect btn modal-trigger waves-light blue lighten-2" style="color: white">VER PERFIL</a>
-          </div>
-        </div>
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
 
-        <div class="col s12 m3">
-          <div class="icon-block">
-            <button class="btn waves-effect waves-light red lighten-2 ">Gabriel Andrade</button>
-            <h2 class="center"><img class="circle responsive-img" src="{% static 'images/profile2.jpg' %}" width="50%"></h2>
-            <a href="#modal3" class="waves-effect btn modal-trigger waves-light blue lighten-2" style="color: white">VER PERFIL</a>
-          </div>
-        </div>
+          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+          <h2 class="text-white mb-5">Inscreva-se para receber notícias!</h2>
 
-        <div class="col s12 m3">
-          <div class="icon-block">
-            <button class="btn waves-effect waves-light red lighten-2 ">Arthur Vasconcellos</button>
-            <h2 class="center"><img class="circle responsive-img" src="{% static 'images/profile3.png' %}" width="50%"></h2>
-            <a href="#modal4" class="waves-effect btn modal-trigger waves-light blue lighten-2" style="color: white">VER PERFIL</a>
-          </div>
-        </div>
+          <form class="form-inline d-flex">
+            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Por enquanto sem funcionar">
+            <button type="submit" class="btn btn-primary mx-auto">Inscrever-se</button>
+          </form>
 
-        <div class="col s12 m3">
-          <div class="icon-block">
-            <button class="btn waves-effect waves-light red lighten-2 ">Cláudio Bessa</button>
-            <h2 class="center"><img class="circle responsive-img" src="{% static 'images/profile4.jpg' %}" width="50%"></h2>
-            <a href="#modal5" class="waves-effect btn modal-trigger waves-light blue lighten-2" style="color: white">VER PERFIL</a>
-          </div>
         </div>
-      </div>
-          <!---->
-       </div>
-
       </div>
     </div>
-    <div class="parallax"><img src="{% static 'images/imagem7.jpg' %}" alt="img"></div>
-  </div>
+  </section>
 
+  <!-- Contact Section -->
+  <section class="contact-section bg-black">
+    <div class="container">
 
+      <div class="row">
 
-<div class="container section scrollspy" id="contactus">
-	<div class="section">
-		<br>
-	<br>
-	<h2 id="contacts">Entre em contato</h2>
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Address</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">JOÃO PESSOA-PB | UNIPÊ</div>
+            </div>
+          </div>
+        </div>
 
-<div class="row">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-envelope text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Email</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+                <a href="#">excelsior.tech@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  <form method="POST" class="col s8">{% csrf_token %}
-
-    <div class="row">
-      <div class="input-field col s6">
-        <input id="name" name="name" maxlength="50" type="text" class="validate">
-        <label for="{{form.name.id_for_label}}">Nome completo</label>
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-mobile-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Phone</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">+55 (83) 99371-8506</div>
+            </div>
+          </div>
+        </div>
       </div>
 
-
-      <div class="input-field col s6">
-        <input id="email" name="email" maxlength="40" type="email" class="validate">
-        <label for="{{form.email.id_for_label}}">Email</label>
+      <div class="social d-flex justify-content-center">
+        <a href="#" class="mx-2">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
-    </div><!--row-->
 
-     <div class="row">
-      <div class="input-field col s12">
-        <input id="title" name="title" maxlength="30" type="text" class="validate">
-        <label for="{{form.title.id_for_label}}">Título da mensagem</label>
-      </div>
     </div>
+  </section>
 
-     <div class="row">
-      <div class="input-field col s12">
-  <!--           <textarea name="message" required id="id_message" rows="10" cols="40">
-</textarea> -->
-         <textarea id="message" name="message" required maxlength="500" class="materialize-textarea"></textarea>
-        <label for="{{form.message.id_for_label}}">Mensagem</label>
-      </div>
-    </div>
-
-
-      <div>
-      	<button type="submit" class="waves-effect waves-light btn purple lighten-1">Enviar mensagem<i class="mdi-content-send right"></i></button>
-      </div>
-     </form>
-
-      <div class="col s12 m4">
-                    <p>
-                       Sigam-nos nas redes sociais e fique por dentro de todas as notícias da Excelsior Tech =D
-                    </p>
-                   <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=&t=" target="_blank" title="Share on Facebook"><img src="{% static 'images/flat_web_icon_set/inverted/Facebook.png' %}"></a></li>
-	<li><a href="https://twitter.com/intent/tweet?source=&text=:%20" target="_blank" title="Tweet"><img src="{% static 'images/flat_web_icon_set/inverted/Twitter.png' %}"></a></li>
-	<li><a href="https://plus.google.com/share?url=" target="_blank" title="Share on Google+"><img src="{% static 'images/flat_web_icon_set/inverted/GooglePlus.png' %}"></a></li>
-</ul>
-</div>
-
-
-</div>
-	</div>
-</div>
-
-
-  <footer class="page-footer purple lighten-1">
-
-    <div class="footer-copyright">
-      <div class="container">
-       <p>Copyright © Excelsior Technologies</p>
-      </div>
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      Copyright &copy; ExcelsiorTech 2019
     </div>
   </footer>
 
-<!-- Modal Structure -->
-<div id="modal1" class="modal deep-purple">
-  <div class="modal-content center white-text">
-    <h4 class="card-title white-text darken-1"><i class="material-icons">announcement</i>  Mensagem do sistema!</h4>
-    <p>Colocar Imagem do canvas aqui</p>
-  </div>
-  <div class="modal-footer deep-purple darken-2">
-    <div class="center">
-        <a class="btn-flat waves-effect modal-close red accent-2 white-text"><i class="material-icons left">cancel</i> FECHAR</a>
-    </div>
-  </div>
-</div>
-<!-- Modal Structure Matheus-->
-<div id="modal2" class="modal deep-purple">
-  <div class="modal-content center white-text">
-    <h5>Nome: Matheus Leite</h5>
-    <img src="{% static 'images\profile1.jpg' %}" width="20%" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-    <h5>Matrícula: 1720020805</h5>
-    <h5>Curso: Ciência da Computação</h5>
-    <h5>Email: matheusjoselfm@gmail.com</h5>
-    <h5>Telefone: (83) 993718506</h5>
-    <h5>Linkedin: <a href="https://www.linkedin.com/in/matheus-jose-leite/" style="color: white;">Clique aqui</a></h5>
-    <h5>Função: Desenvolvedor Web</h5>
-  </div>
-  <div class="modal-footer deep-purple darken-2">
-    <div class="center">
-        <a class="btn-flat waves-effect modal-close red accent-2 white-text"><i class="material-icons left">cancel</i> FECHAR</a>
-    </div>
-  </div>
-</div>
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
-<!-- Modal Structure Gabriel-->
-<div id="modal3" class="modal deep-purple">
-  <div class="modal-content center white-text">
-    <h5>Nome: Gabriel Andrade</h5>
-    <img src="{% static 'images\profile2.jpg' %}" width="20%" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-    <h5>Matrícula: 1810021814</h5>
-    <h5>Curso: Ciência da Computação</h5>
-    <h5>Email: gabrielcandrade01@gmail.com</h5>
-    <h5>Telefone: (83) 999903160</h5>
-    <h5>Linkedin: <a href="https://www.linkedin.com/in/gabrielcandradecg/" style="color: white;">Clique aqui</a></h5>
-    <h5>Função: Desenvolvedor Full-stack</h5>
-  </div>
-  <div class="modal-footer deep-purple darken-2">
-    <div class="center">
-        <a class="btn-flat waves-effect modal-close red accent-2 white-text"><i class="material-icons left">cancel</i> FECHAR</a>
-    </div>
-  </div>
-</div>
+  <!-- Plugin JavaScript -->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
 
-<!-- Modal Structure Arthur-->
-<div id="modal4" class="modal deep-purple">
-  <div class="modal-content center white-text">
-    <h5>Nome: Arthur Vasconcellos</h5>
-    <img src="{% static 'images\profile3.png' %}" width="20%" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-    <h5>Matrícula: 1620016556</h5>
-    <h5>Curso: Ciência da Computação</h5>
-    <h5>Email: contatoarthursilveira@gmail.com</h5>
-    <h5>Telefone: (83) 999080301</h5>
-    <h5>Linkedin: <a href="https://www.linkedin.com/in/arthurvasconcellospb/" style="color: white;">Clique aqui</a></h5>
-    <h5>Função: Front-end developer</h5>
-  </div>
-  <div class="modal-footer deep-purple darken-2">
-    <div class="center">
-        <a class="btn-flat waves-effect modal-close red accent-2 white-text"><i class="material-icons left">cancel</i> FECHAR</a>
-    </div>
-  </div>
-</div>
+  <!-- Custom scripts for this template -->
+  <script src="{% static 'js/grayscale.min.js' %}"></script>
 
-<!-- Modal Structure Claudio-->
-<div id="modal5" class="modal deep-purple">
-  <div class="modal-content center white-text">
-    <h5>Nome: Cláudio Bessa</h5>
-    <img src="{% static 'images\profile4.jpg' %}" width="20%" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-    <h5>Matrícula: 1810022607</h5>
-    <h5>Curso: Ciência da Computação</h5>
-    <h5>Email: claudiobmontenegro@gmail.com</h5>
-    <h5>Telefone: (83) 996540306</h5>
-    <h5>Linkedin: <a href="https://www.linkedin.com/in/cláudio-bessa-montenegro-48a153162/" style="color: white;">Clique aqui</a></h5>
-  </div>
-  <div class="modal-footer deep-purple darken-2">
-    <div class="center">
-        <a class="btn-flat waves-effect modal-close red accent-2 white-text"><i class="material-icons left">cancel</i> FECHAR</a>
-    </div>
-  </div>
-</div>
+</body>
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<!--   <script src="{% static 'js/materialize.js' %}"></script>
- -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
-   <script src="{% static 'js/init.js' %}"></script>
-  <script>
-  $(document).ready(function(){
-    $('.materialboxed').materialbox();
-    $('.button-collapse').sideNav();
-
-  });
-  $(document).ready(function(){
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-  $('.modal').modal();
-  // $('#modal1').modal('open');
-  });
-
-
-  </script>
-  <script>
-  	    $('.head-link').click(function(e) {
-        e.preventDefault();
-
-        var goto = $(this).attr('href');
-
-        $('html, body').animate({
-            scrollTop: $(goto).offset().top
-        }, 800);
-    });
-
-  </script>
-
-			 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-60673008-2', 'auto');
-  ga('send', 'pageview');
-</script>
-  </body>
 </html>
