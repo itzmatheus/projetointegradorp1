@@ -25,7 +25,7 @@ SECRET_KEY = 'biz%r-^7!hrvua8q)w3an+3xr2eu9yly_3=+c7$8-pz7v(pyci'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
